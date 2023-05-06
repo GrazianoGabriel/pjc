@@ -1,0 +1,11 @@
+nome;id;data_nasc;mae;pai;votou
+Gabriel;3457;23/04/1993;Ana Paula;Tarcisio
+Jose;2394;25/12/1980;Maria;Jesus;0
+Paula;3948;13/09/1970;Maria;Rodolfo;1
+Gabriel;2342;03/08/1993;Joana;Carlos;0
+Diana;88732;04/06/1964;Wanda;Lourival;1
+Felipe;738463;09/09/1994;Margarida;Paulo;1
+Roberto;837329;30/04/1979;Rute;Fabio;1
+Pedro;93823;04/08/1949;Marvila;Rodolfo;0
+Ari;48393;09/03/1987;Rose;Jonas;1
+Kamila;849384;08/09/1998;Gabriela;Kamil;1
