@@ -1,23 +1,22 @@
 import os
 import library_PF
 
-caminho = os.path.join('ProjetoFinal','dados.csv')
+opcao = 0
 
-#library_PF.cadastro_eleitor(caminho)
+opcao = int(input('\nPara cadastrar um novo eleitor, digite 1. Para emitir Certidão de quitação eleitoral, digite 2: '))
 
-myFile = open(caminho, 'r')
-linhas = myFile.readlines()
+while opcao != 1 and opcao != 2:
+    print('\nOpcao invalida.')
+    opcao = int(input('Para cadastrar um novo eleitor, digite 1. Para emitir Certidão de quitação eleitoral, digite 2: '))
 
-for i in linhas:
-    line = i.split(';')
+if opcao == 1:
+    library_PF.cadastro_eleitor('eleitores.csv')
+else: 
+    print('\nPara emissao da Certidão de quitação eleitoral, informe os dados abaixo: \n')
 
-    if line[0] == 'Gabriel':
-        print(line)
-     
-myFile.close()
+    nome = input("Nome completo: ")
+    nome_mae = input("Nome da mae: ")
+    id = input("Número do título: ")
 
-
-
-
-
-
+    if library_PF.valida_eleitor('eleitores.csv', nome, id, nome_mae):
+        library_PF.emite_certidao('eleitores.csv', nome, nome_mae, id)
